@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align:center;
+            position: relative;
+        }
+        .bodyImg{width:100%;}
+    </style>
+    <script src="js/mapControl.js"></script>
+    <script>
+        function imgLoaded(){
+            var mapControler1 = new mapControlFn("map1",{//map1为热点的名字，多个热点不能重名
+                href:"01.html",//热点跳转的地址
+                scaleW:0.12,//热点相对与内容图片宽的缩放比例
+                scaleH:0.06,//热点相对与内容图片高的缩放比例
+                left:"0%",//热点相对于屏幕右上X轴角位置
+                top:"3%"//热点相对于屏幕右上角Y轴位置
+            });
+            window.onresize = function(){
+                if(imgLoaded){
+                    mapControler1.init();
+                }
+            }
+        }
+
+    </script>
+    <title>无标题文档</title>
+</head>
+<body>
+<img src="image/03.jpg" alt="" id="bodyImg" class="bodyImg" onload="imgLoaded()"/>
+</body>
+</html>

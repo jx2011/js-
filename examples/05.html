@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align:center;
+            position: relative;
+        }
+        .bodyImg{width:100%;}
+    </style>
+    <script src="js/mapControl.js"></script>
+    <script>
+        function imgLoaded(){
+            var mapControler1,mapControler2,mapControler3;
+                mapControler1 = new mapControlFn("map1",{//map1为热点的名字，多个热点不能重名
+                    href:"01.html",//热点跳转的地址
+                    scaleW:0.12,//热点相对与内容图片宽的缩放比例
+                    scaleH:0.07,//热点相对与内容图片高的缩放比例
+                    left:"0%",//热点相对于屏幕右上X轴角位置
+                    top:"3%"//热点相对于屏幕右上角Y轴位置
+                });
+                mapControler2 = new mapControlFn("map2",{//map1为热点的名字，多个热点不能重名
+                    href:"033.html",//热点跳转的地址
+                    scaleW:1,//热点相对与内容图片宽的缩放比例
+                    scaleH:0.11,//热点相对与内容图片高的缩放比例
+                    left:"0%",//热点相对于屏幕右上X轴角位置
+                    top:"29%"//热点相对于屏幕右上角Y轴位置
+                });
+                mapControler3 = new mapControlFn("map3",{//map1为热点的名字，多个热点不能重名
+                    href:"033.html",//热点跳转的地址
+                    scaleW:1,//热点相对与内容图片宽的缩放比例
+                    scaleH:0.108,//热点相对与内容图片高的缩放比例
+                    left:"0%",//热点相对于屏幕右上X轴角位置
+                    top:"40%"//热点相对于屏幕右上角Y轴位置
+                });
+            mapControler4 = new mapControlFn("map4",{//map1为热点的名字，多个热点不能重名
+                href:"033.html",//热点跳转的地址
+                scaleW:1,//热点相对与内容图片宽的缩放比例
+                scaleH:0.108,//热点相对与内容图片高的缩放比例
+                left:"0%",//热点相对于屏幕右上X轴角位置
+                top:"51%"//热点相对于屏幕右上角Y轴位置
+            });
+            mapControler5 = new mapControlFn("map5",{//map1为热点的名字，多个热点不能重名
+                href:"033.html",//热点跳转的地址
+                scaleW:1,//热点相对与内容图片宽的缩放比例
+                scaleH:0.108,//热点相对与内容图片高的缩放比例
+                left:"0%",//热点相对于屏幕右上X轴角位置
+                top:"61%"//热点相对于屏幕右上角Y轴位置
+            });
+            mapControler6 = new mapControlFn("map6",{//map1为热点的名字，多个热点不能重名
+                href:"033.html",//热点跳转的地址
+                scaleW:1,//热点相对与内容图片宽的缩放比例
+                scaleH:0.108,//热点相对与内容图片高的缩放比例
+                left:"0%",//热点相对于屏幕右上X轴角位置
+                top:"71.5%"//热点相对于屏幕右上角Y轴位置
+            });
+            mapControler7 = new mapControlFn("map7",{//map1为热点的名字，多个热点不能重名
+                href:"033.html",//热点跳转的地址
+                scaleW:1,//热点相对与内容图片宽的缩放比例
+                scaleH:0.108,//热点相对与内容图片高的缩放比例
+                left:"0%",//热点相对于屏幕右上X轴角位置
+                top:"82.5%"//热点相对于屏幕右上角Y轴位置
+            });
+
+            window.onresize = function(){
+                if(imgLoaded){
+                    mapControler1.init();
+                }
+            }
+        }
+
+    </script>
+    <title>无标题文档</title>
+</head>
+
+<body>
+<img src="image/05.jpg" alt="" id="bodyImg" class="bodyImg" onload="imgLoaded()"/>
+
+</body>
+</html>
